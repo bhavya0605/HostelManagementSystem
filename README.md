@@ -1,95 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hostel Management System - README</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        pre {
-            background: #222;
-            color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-        code {
-            font-family: monospace;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Hostel Management System</h1>
-        <p>A Java Swing-based Hostel Management System with MySQL integration.</p>
+# Hostel Management System
 
-        <h2>Project Structure</h2>
-        <pre><code>HostelManagementSystem/
+## 📌 Project Description
+This is a **Java Swing-based GUI application** for a **Hostel Management System**. It allows users to **Sign In** and **Sign Up** with credentials stored in a MySQL database. The application features a splash screen, an intuitive UI, and a background image (`background.png`).
+
+## 🛠️ Tech Stack
+- **Java (Swing)** - GUI for Sign In & Sign Up
+- **JDBC (MySQL)** - Database connection for user authentication
+- **Git & GitHub** - Version control and repository hosting
+
+---
+## 🚀 How to Set Up & Run the Project
+
+### **🔹 Prerequisites**
+1. Install **Java JDK 8 or later**
+2. Install **MySQL** and create a database named `hostel_management`
+3. Install **Git**
+
+### **📂 Project Structure**
+```
+HostelManagementSystem/
 │── src/
 │   ├── SignInSignUpPage.java
 │   ├── HostelManagementSystem.java
 │   ├── background.png
-│── README.html
-│── database.sql (for table structure)</code></pre>
+│── README.md
+│── .gitignore
+│── database.sql (optional - if database schema is included)
+```
 
-        <h2>Database Setup</h2>
-        <p>Run the following SQL script to create the required database:</p>
-        <pre><code>CREATE DATABASE hostel_management;
-USE hostel_management;
-CREATE TABLE students1 (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) UNIQUE NOT NULL,
-    password VARCHAR(50) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    phone VARCHAR(10) NOT NULL,
-    hostel VARCHAR(50),
-    enrollment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);</code></pre>
+---
+## 🔧 **Database Setup**
+1. Open MySQL and create the database:
+   ```sql
+   CREATE DATABASE hostel_management;
+   USE hostel_management;
+   ```
+2. Create the `students1` table:
+   ```sql
+   CREATE TABLE students1 (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       username VARCHAR(255) UNIQUE NOT NULL,
+       password VARCHAR(255) NOT NULL,
+       email VARCHAR(255) NOT NULL,
+       phone VARCHAR(10) NOT NULL,
+       hostel VARCHAR(255) NOT NULL,
+       enrollment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+   );
+   ```
 
-        <h2>GitHub Setup</h2>
-        <p>Follow these commands to initialize and push the project to GitHub:</p>
-        <pre><code>git init
-git remote add origin https://github.com/yourusername/HostelManagementSystem.git
+---
+## 🖥️ **Run the Application**
+1. **Compile the Java files**
+   ```sh
+   javac -cp .;mysql-connector-java-8.0.33.jar src/*.java
+   ```
+2. **Run the application**
+   ```sh
+   java -cp .;mysql-connector-java-8.0.33.jar src.SignInSignUpPage
+   ```
+
+---
+## 🌐 **Upload to GitHub**
+### **📌 Step 1: Initialize Git**
+```sh
+git init
 git add .
 git commit -m "Initial commit"
+```
+
+### **📌 Step 2: Link to GitHub Repository**
+1. Create a repository on GitHub (e.g., `HostelManagementSystem`)
+2. Run the following commands:
+```sh
+git branch -M main
+git remote add origin https://github.com/your-username/HostelManagementSystem.git
+git push -u origin main
+```
+
+### **📌 If Push Fails (Fix Remote Conflicts)**
+```sh
 git pull origin main --rebase
+git push -u origin main
+```
 
-git push -u origin main</code></pre>
+🔴 **If conflicts persist and you're sure about overwriting remote changes:**
+```sh
+git push -u origin main --force
+```
 
-        <h2>How to Run</h2>
-        <p>Compile and run the Java files:</p>
-        <pre><code>javac -cp .;mysql-connector-java.jar src/SignInSignUpPage.java
-java -cp .;mysql-connector-java.jar src.SignInSignUpPage</code></pre>
+---
+## 💡 **Contributing**
+1. Fork the repository
+2. Clone it: `git clone https://github.com/your-username/HostelManagementSystem.git`
+3. Create a new branch: `git checkout -b feature-branch`
+4. Make changes and commit: `git commit -m "Your message"`
+5. Push changes: `git push origin feature-branch`
+6. Create a Pull Request on GitHub
 
-        <h2>Contributing</h2>
-        <ul>
-            <li>Fork the repository</li>
-            <li>Clone it: <code>git clone https://github.com/yourusername/HostelManagementSystem.git</code></li>
-            <li>Create a branch: <code>git checkout -b feature-branch</code></li>
-            <li>Commit changes: <code>git commit -m "Your message"</code></li>
-            <li>Push to GitHub: <code>git push origin feature-branch</code></li>
-            <li>Create a Pull Request</li>
-        </ul>
+---
+## 📄 **License**
+This project is licensed under the **MIT License**.
 
-        <h2>License</h2>
-        <p>This project is licensed under the MIT License.</p>
-    </div>
-</body>
-</html>
+---
+## 📞 **Contact**
+For any queries, feel free to reach out via **GitHub Issues**.
+
+---
+🚀 **Happy Coding!**
+
