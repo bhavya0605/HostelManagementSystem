@@ -171,16 +171,16 @@ CREATE TABLE students1 (
 ---
 ## 📸 **GUI Screenshots**
 ### **Dashboard**
-![Dashboard](images/Dashboard.png)
+![Dashboard](Dashboard.png)
 
 ### **Sign In Page**
-![Sign In Page](images/SignInPage.png)
+![Sign In Page](SignInPage.png)
 
 ### **Sign Up Page**
-![Sign Up Page](images/SignUpPage.png)
+![Sign Up Page](SignUpPage.png)
 
 ### **Splash Screen**
-![Splash Screen](images/SplashScreen.png)
+![Splash Screen](SplashScreen.png)
 
 ---
 ## 🌍 **Upload to GitHub**
